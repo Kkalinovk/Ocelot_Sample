@@ -1,0 +1,35 @@
+{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/weatherforecast",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "172.17.0.1",
+                    "Port": 8081
+                }
+            ],
+            "UpstreamPathTemplate": "/api_1/weatherforecast",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/weatherforecast",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "172.17.0.1",
+                    "Port": 8082
+                }
+            ],
+            "UpstreamPathTemplate": "/api_2/weatherforecast",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5000"
+    }
+}
